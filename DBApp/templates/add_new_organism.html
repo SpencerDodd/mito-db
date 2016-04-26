@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add New Organism To DB</title>
+ 
+    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.12.3.min.js"></script>
+    <script src="../static/js/addNewOrganism.js"></script>
+    
+  </head>
+ 
+  <body>
+ 
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="/">Home</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Mitochondrial Genomic Data</h3>
+        </div>
+ 
+      <div class="jumbotron">
+        <h1>Add New Organism</h1>
+        <p>
+          This tool adds an organism to the database. The required information for the new organism is a name,
+          NCBI accession number, and FASTA format sequence for the organism's mitochondrial genome.
+        </p>
+        <form class="form-signin">
+        <label for="organismName" class="sr-only">Organism Name</label>
+        <input type="organismName" name="organismName" id="organismName" class="form-control" placeholder="Organism Name" required autofocus>
+        <label for="accessionNumber" class="sr-only">Accession Number</label>
+        <input type="accessionNumber" name="accessionNumber" id="accessionNumber" class="form-control" placeholder="Accession Number" required autofocus>
+        <label for="fastaSequence" class="sr-only">FASTA sequence</label>
+        <input type="fastaSequence" name="fastaSequence" id="fastaSequence" class="form-control" placeholder="FASTA Sequence" required>
+         
+        <button id="btnAddNewOrganism" class="btn btn-lg btn-primary btn-block" type="button">Add Organism</button>
+      </form>
+      </div>
+ 
+       
+ 
+      <footer class="footer">
+        <p>&copy; Spencer Dodd 2016</p>
+      </footer>
+ 
+    </div>
+  </body>
+</html>

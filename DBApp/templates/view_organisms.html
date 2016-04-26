@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>View Organisms in DB</title>
+ 
+    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+    
+  </head>
+ 
+  <body>
+
+    <var organisms = {{ organisms_in_db|safe }}>
+ 
+    <div class="container">
+      <div class="header">
+          <nav>
+              <ul class="nav nav-pills pull-right">
+                  <li role="presentation" class="active"><a href="/">Home</a>
+                  </li>
+              </ul>
+          </nav>
+          <h3 class="text-muted">Organisms in Database</h3>
+      </div>
+
+      <p><b>Return format:</b> Organism name | Accession Number | FASTA Sequence</p>
+      <ul id='Organisms'>
+
+        {% for item in organisms %}
+
+          <li>{{ item[1] }} | {{ item[2] }} | {{ item[3] }}</li>
+
+        {% endfor %}
+
+      </ul>
+ 
+      <footer class="footer">
+        <p>&copy; Spencer Dodd 2016</p>
+      </footer>
+ 
+    </div>
+  </body>
+</html>
